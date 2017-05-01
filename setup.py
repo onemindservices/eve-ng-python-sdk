@@ -16,4 +16,8 @@ setup(
     license='MIT',
     url='https://github.com/slarimore02/eve-ng-python-sdk.git',
     install_requires=['requests'],
+    classifiers=[
+      'Development Status :: 3 - Alpha',
+      'Programming Language :: Python :: 2.7',
+    ],
 )
