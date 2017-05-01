@@ -1,11 +1,13 @@
-Metadata-Version: 1.0
+Metadata-Version: 1.1
 Name: RestEveClient
 Version: 0.0.6
 Summary: EVE-NG REST Client Library
-Home-page: https://github.com/pypa/sampleproject
+Home-page: https://github.com/slarimore02/eve-ng-python-sdk.git
 Author: Sean Larimore
 Author-email: UNKNOWN
 License: MIT
 Description: UNKNOWN
-Keywords: eve unetlab rest api sdk library client
+Keywords: eve-ng unetlab rest api sdk library client
 Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 2.7

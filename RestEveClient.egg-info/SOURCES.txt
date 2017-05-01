@@ -7,9 +7,9 @@ RestEveClient.egg-info/requires.txt
 RestEveClient.egg-info/top_level.txt
 resteve/__init__.py
 resteve/device.py
+resteve/eve.py
 resteve/helper.py
 resteve/server.py
-resteve/unetlab.py
 samples/__init__.py
 samples/app-1.py
 samples/app-2.py

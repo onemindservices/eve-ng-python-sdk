@@ -6,8 +6,8 @@ def read(fname):
     return open(path.join(path.dirname(__file__), fname)).read()
 
 setup(
-    name='RestEveClient',
-    description='EVE-NG REST Client Library',
+    name='eve-ng-sdk',
+    description='EVE-NG REST API Library',
     author='Sean Larimore',
     long_description=read('README'),
     version='0.0.6',
