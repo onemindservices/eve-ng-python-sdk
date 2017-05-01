@@ -14,7 +14,7 @@ REST_SCHEMA = {
     'create_net': '/labs/{lab_name}/networks',
     'get_nets': '/labs/{lab_name}/networks',
     'connect_interface': '/labs/{lab_name}/nodes/{node_id}/interfaces',
-
+    'get_users': '/users/',
     'delete_node': '/labs/{lab_name}/nodes/{node_id}',
     'start_all_nodes': '/labs/{lab_name}/nodes/start',
     'stop_all_nodes': '/labs/{lab_name}/nodes/stop',
@@ -56,6 +56,13 @@ class EveServer(RestServer):
     def get_user_info(self):
         api_call = REST_SCHEMA['get_user_info']
         resp = self.get_object(api_call)
+        return resp
+
+    def get_users(self):
+        api_call = REST_SCHEMA['get_users']
+        api_url = api_call.format(api_call)
+        print api_url
+        resp = self.get_object(api_url)
         return resp
 
     def create_lab(self, name):
