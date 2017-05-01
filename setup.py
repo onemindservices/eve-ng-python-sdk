@@ -10,7 +10,7 @@ setup(
     description='Eve-ng Python SDK',
     author='Sean Larimore',
     long_description=read('README'),
-    version='2.0.0',
+    version='0.0.6',
     packages=find_packages(exclude=['tests']),
     keywords='eve-ng unetlab rest api sdk library client',
     license='MIT',
