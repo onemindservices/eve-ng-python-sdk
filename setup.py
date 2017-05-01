@@ -10,7 +10,7 @@ setup(
     description='EVE-NG REST API Library',
     author='Sean Larimore',
     long_description=read('README'),
-    version='0.0.6',
+    version='0.0.7',
     packages=find_packages(exclude=['tests']),
     keywords='eve-ng unetlab rest api sdk library client',
     license='MIT',

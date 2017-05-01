@@ -61,7 +61,6 @@ class EveServer(RestServer):
     def get_users(self):
         api_call = REST_SCHEMA['get_users']
         api_url = api_call.format(api_call)
-        print api_url
         resp = self.get_object(api_url)
         return resp
 
