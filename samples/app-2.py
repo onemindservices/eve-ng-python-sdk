@@ -1,6 +1,6 @@
-from restunl.unetlab import UnlServer
-from restunl.device import Router
-from restunl.helper import *
+from resteve.eve import EveServer
+from resteve.device import Router
+from resteve.helper import *
 import time
 
 LAB_NAME = 'test_1'
@@ -50,10 +50,10 @@ def ext_connect(lab, nodes, rule):
 
 
 def app():
-    unl = UnlServer('192.168.247.20')
-    unl.login('admin', 'unl')
-    print("*** CONNECTED TO UNL")
-    lab = unl.create_lab(LAB_NAME)
+    eve = EveServer('192.168.247.20')
+    eve.login('admin', 'eve')
+    print("*** CONNECTED TO EVE-NG")
+    lab = eve.create_lab(LAB_NAME)
     try:
         lab.cleanup()
         print("*** CREATED LAB")
@@ -72,7 +72,7 @@ def app():
     finally:
         print("*** CLEANING UP THE LAB")
         lab.cleanup()
-        unl.delete_lab(LAB_NAME)
+        eve.delete_lab(LAB_NAME)
 
 if __name__ == '__main__':
     app()

@@ -1,6 +1,6 @@
-from restunl.unetlab import UnlServer
-from restunl.device import Router
-from restunl.helper import *
+from resteve.eve import EveServer
+from resteve.device import Router
+from resteve.helper import *
 
 LAB_NAME = 'test_1'
 TOPOLOGY = {('R1', 'Ethernet0/0'): ('R2', 'Ethernet0/0'),
@@ -11,13 +11,13 @@ TOPOLOGY = {('R1', 'Ethernet0/0'): ('R2', 'Ethernet0/0'),
 
 def app():
     try:
-        unl = UnlServer('192.168.247.20')
-        unl.login('admin', 'unl')
-        print("*** CONNECTED TO UNL")
-        lab = unl.create_lab(LAB_NAME)
+        eve = EveServer('192.168.247.20')
+        eve.login('admin', 'eve')
+        print("*** CONNECTED TO EVE-NG")
+        lab = eve.create_lab(LAB_NAME)
         lab.cleanup()
         print("*** CREATED LAB")
-        # Creating topology in UnetLab
+        # Creating topology in Eve-ng
         nodes = dict()
         for (a_name, a_intf), (b_name, b_intf) in TOPOLOGY.iteritems():
             # Create a mapping between a Node's name and an object
@@ -46,7 +46,7 @@ def app():
     finally:
         print("*** CLEANING UP THE LAB")
         lab.cleanup()
-        unl.delete_lab(LAB_NAME)
+        eve.delete_lab(LAB_NAME)
 
 if __name__ == '__main__':
     app()

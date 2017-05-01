@@ -1,6 +1,6 @@
 import unittest
-from restunl.unetlab import *
-from restunl.device import Router
+from resteve.eve import *
+from resteve.device import Router
 
 UNETLAB_ADDRESS = '192.168.247.20'
 USERNAME = 'admin'
